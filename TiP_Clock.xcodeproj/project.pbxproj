@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BC2135A1F8989B900996D37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC213591F8989B900996D37 /* UIKit.framework */; };
+		9BC2135C1F8989B900996D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC2135B1F8989B900996D37 /* Foundation.framework */; };
+		9BC2135E1F8989B900996D37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC2135D1F8989B900996D37 /* CoreGraphics.framework */; };
+		9BC213641F8989B900996D37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC213621F8989B900996D37 /* InfoPlist.strings */; };
+		9BC213661F8989B900996D37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC213651F8989B900996D37 /* main.m */; };
+		9BC2136A1F8989B900996D37 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC213691F8989B900996D37 /* TCAppDelegate.m */; };
+		9BC2136D1F8989B900996D37 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC2136B1F8989B900996D37 /* MainStoryboard.storyboard */; };
+		9BC213701F8989B900996D37 /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC2136F1F8989B900996D37 /* TCViewController.m */; };
+		9BC213781F8989B900996D37 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC213771F8989B900996D37 /* SenTestingKit.framework */; };
+		9BC213791F8989B900996D37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC213591F8989B900996D37 /* UIKit.framework */; };
+		9BC2137A1F8989B900996D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC2135B1F8989B900996D37 /* Foundation.framework */; };
+		9BC213821F8989B900996D37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC213801F8989B900996D37 /* InfoPlist.strings */; };
+		9BC213851F8989B900996D37 /* TiP_ClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC213841F8989B900996D37 /* TiP_ClockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BC2137B1F8989B900996D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BC2134C1F8989B900996D37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BC213541F8989B900996D37;
+			remoteInfo = TiP_Clock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BC213551F8989B900996D37 /* TiP_Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiP_Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC213591F8989B900996D37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9BC2135B1F8989B900996D37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9BC2135D1F8989B900996D37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9BC213611F8989B900996D37 /* TiP_Clock-Info.plist */ = {isa = PBXFileReference; path = "TiP_Clock-Info.plist"; sourceTree = "<group>"; };
+		9BC213631F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BC213651F8989B900996D37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BC213671F8989B900996D37 /* TiP_Clock-Prefix.pch */ = {isa = PBXFileReference; path = "TiP_Clock-Prefix.pch"; sourceTree = "<group>"; };
+		9BC213681F8989B900996D37 /* TCAppDelegate.h */ = {isa = PBXFileReference; path = TCAppDelegate.h; sourceTree = "<group>"; };
+		9BC213691F8989B900996D37 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
+		9BC2136C1F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9BC2136E1F8989B900996D37 /* TCViewController.h */ = {isa = PBXFileReference; path = TCViewController.h; sourceTree = "<group>"; };
+		9BC2136F1F8989B900996D37 /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
+		9BC213761F8989B900996D37 /* TiP_ClockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiP_ClockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC213771F8989B900996D37 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9BC2137F1F8989B900996D37 /* TiP_ClockTests-Info.plist */ = {isa = PBXFileReference; path = "TiP_ClockTests-Info.plist"; sourceTree = "<group>"; };
+		9BC213811F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BC213831F8989B900996D37 /* TiP_ClockTests.h */ = {isa = PBXFileReference; path = TiP_ClockTests.h; sourceTree = "<group>"; };
+		9BC213841F8989B900996D37 /* TiP_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiP_ClockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BC213521F8989B900996D37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC2135A1F8989B900996D37 /* UIKit.framework in Frameworks */,
+				9BC2135C1F8989B900996D37 /* Foundation.framework in Frameworks */,
+				9BC2135E1F8989B900996D37 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC213721F8989B900996D37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC213781F8989B900996D37 /* SenTestingKit.framework in Frameworks */,
+				9BC213791F8989B900996D37 /* UIKit.framework in Frameworks */,
+				9BC2137A1F8989B900996D37 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BC2134A1F8989B900996D37 = {
+			isa = PBXGroup;
+			children = (
+				9BC2135F1F8989B900996D37 /* TiP_Clock */,
+				9BC2137D1F8989B900996D37 /* TiP_ClockTests */,
+				9BC213581F8989B900996D37 /* Frameworks */,
+				9BC213561F8989B900996D37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BC213561F8989B900996D37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BC213551F8989B900996D37 /* TiP_Clock.app */,
+				9BC213761F8989B900996D37 /* TiP_ClockTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BC213581F8989B900996D37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BC213591F8989B900996D37 /* UIKit.framework */,
+				9BC2135B1F8989B900996D37 /* Foundation.framework */,
+				9BC2135D1F8989B900996D37 /* CoreGraphics.framework */,
+				9BC213771F8989B900996D37 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BC2135F1F8989B900996D37 /* TiP_Clock */ = {
+			isa = PBXGroup;
+			children = (
+				9BC213681F8989B900996D37 /* TCAppDelegate.h */,
+				9BC213691F8989B900996D37 /* TCAppDelegate.m */,
+				9BC2136B1F8989B900996D37 /* MainStoryboard.storyboard */,
+				9BC2136E1F8989B900996D37 /* TCViewController.h */,
+				9BC2136F1F8989B900996D37 /* TCViewController.m */,
+				9BC213601F8989B900996D37 /* Supporting Files */,
+			);
+			path = TiP_Clock;
+			sourceTree = "<group>";
+		};
+		9BC213601F8989B900996D37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC213611F8989B900996D37 /* TiP_Clock-Info.plist */,
+				9BC213621F8989B900996D37 /* InfoPlist.strings */,
+				9BC213651F8989B900996D37 /* main.m */,
+				9BC213671F8989B900996D37 /* TiP_Clock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BC2137D1F8989B900996D37 /* TiP_ClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BC213831F8989B900996D37 /* TiP_ClockTests.h */,
+				9BC213841F8989B900996D37 /* TiP_ClockTests.m */,
+				9BC2137E1F8989B900996D37 /* Supporting Files */,
+			);
+			path = TiP_ClockTests;
+			sourceTree = "<group>";
+		};
+		9BC2137E1F8989B900996D37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC2137F1F8989B900996D37 /* TiP_ClockTests-Info.plist */,
+				9BC213801F8989B900996D37 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BC213541F8989B900996D37 /* TiP_Clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BC213881F8989B900996D37 /* Build configuration list for PBXNativeTarget "TiP_Clock" */;
+			buildPhases = (
+				9BC213511F8989B900996D37 /* Sources */,
+				9BC213521F8989B900996D37 /* Frameworks */,
+				9BC213531F8989B900996D37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TiP_Clock;
+			productName = TiP_Clock;
+			productReference = 9BC213551F8989B900996D37 /* TiP_Clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BC213751F8989B900996D37 /* TiP_ClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BC2138B1F8989B900996D37 /* Build configuration list for PBXNativeTarget "TiP_ClockTests" */;
+			buildPhases = (
+				9BC213711F8989B900996D37 /* Sources */,
+				9BC213721F8989B900996D37 /* Frameworks */,
+				9BC213731F8989B900996D37 /* Resources */,
+				9BC213741F8989B900996D37 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BC2137C1F8989B900996D37 /* PBXTargetDependency */,
+			);
+			name = TiP_ClockTests;
+			productName = TiP_ClockTests;
+			productReference = 9BC213761F8989B900996D37 /* TiP_ClockTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BC2134C1F8989B900996D37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TC;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9BC2134F1F8989B900996D37 /* Build configuration list for PBXProject "TiP_Clock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9BC2134A1F8989B900996D37;
+			productRefGroup = 9BC213561F8989B900996D37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BC213541F8989B900996D37 /* TiP_Clock */,
+				9BC213751F8989B900996D37 /* TiP_ClockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BC213531F8989B900996D37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC213641F8989B900996D37 /* InfoPlist.strings in Resources */,
+				9BC2136D1F8989B900996D37 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC213731F8989B900996D37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC213821F8989B900996D37 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BC213741F8989B900996D37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BC213511F8989B900996D37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC213661F8989B900996D37 /* main.m in Sources */,
+				9BC2136A1F8989B900996D37 /* TCAppDelegate.m in Sources */,
+				9BC213701F8989B900996D37 /* TCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC213711F8989B900996D37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC213851F8989B900996D37 /* TiP_ClockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BC2137C1F8989B900996D37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BC213541F8989B900996D37 /* TiP_Clock */;
+			targetProxy = 9BC2137B1F8989B900996D37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BC213621F8989B900996D37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC213631F8989B900996D37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BC2136B1F8989B900996D37 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC2136C1F8989B900996D37 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9BC213801F8989B900996D37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC213811F8989B900996D37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BC213861F8989B900996D37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9BC213871F8989B900996D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BC213891F8989B900996D37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
+				INFOPLIST_FILE = "TiP_Clock/TiP_Clock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9BC2138A1F8989B900996D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
+				INFOPLIST_FILE = "TiP_Clock/TiP_Clock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9BC2138C1F8989B900996D37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TiP_Clock.app/TiP_Clock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
+				INFOPLIST_FILE = "TiP_ClockTests/TiP_ClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9BC2138D1F8989B900996D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TiP_Clock.app/TiP_Clock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
+				INFOPLIST_FILE = "TiP_ClockTests/TiP_ClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BC2134F1F8989B900996D37 /* Build configuration list for PBXProject "TiP_Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC213861F8989B900996D37 /* Debug */,
+				9BC213871F8989B900996D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BC213881F8989B900996D37 /* Build configuration list for PBXNativeTarget "TiP_Clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC213891F8989B900996D37 /* Debug */,
+				9BC2138A1F8989B900996D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BC2138B1F8989B900996D37 /* Build configuration list for PBXNativeTarget "TiP_ClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BC2138C1F8989B900996D37 /* Debug */,
+				9BC2138D1F8989B900996D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BC2134C1F8989B900996D37 /* Project object */;
+}
