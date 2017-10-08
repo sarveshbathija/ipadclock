@@ -17,35 +17,24 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    /******** 1 ********/
     [self updateClockLabel];
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
-/******** 1 ********/
 -(void)updateClockLabel {
     
-    /******** 2 ********/
     NSDateFormatter *clockFormat = [[NSDateFormatter alloc] init];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    
+    self.clockLabel.text = [clockFormat stringFromDate:[NSDate date]];
+    self.dateLabel.text = [dateFormat stringFromDate:[NSDate date]];
+
+    [dateFormat setDateFormat:@"EEEE - MMM d, YYYY"];
     [clockFormat setDateFormat:@"h:mm a"];
     
-    /******** 3 ********/
-    self.clockLabel.text = [clockFormat stringFromDate:[NSDate date]];
-    
-    /******** 4 ********/
     [self performSelector:@selector(updateClockLabel) withObject:self afterDelay:1.0];
-    
-    /******** 2 ********/
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"EEEE - MMM d, YYYY"];
-    
-    /******** 3 ********/
-    self.dateLabel.text = [dateFormat stringFromDate:[NSDate date]];
-    
-    /******** 4 ********/
     [self performSelector:@selector(updateDateLabel) withObject:self afterDelay:30.0];
 }
 
@@ -55,7 +44,6 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
