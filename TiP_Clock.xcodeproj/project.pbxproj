@@ -37,20 +37,20 @@
 		9BC213591F8989B900996D37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BC2135B1F8989B900996D37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9BC2135D1F8989B900996D37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9BC213611F8989B900996D37 /* TiP_Clock-Info.plist */ = {isa = PBXFileReference; path = "TiP_Clock-Info.plist"; sourceTree = "<group>"; };
+		9BC213611F8989B900996D37 /* TiP_Clock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TiP_Clock-Info.plist"; sourceTree = "<group>"; };
 		9BC213631F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9BC213651F8989B900996D37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9BC213671F8989B900996D37 /* TiP_Clock-Prefix.pch */ = {isa = PBXFileReference; path = "TiP_Clock-Prefix.pch"; sourceTree = "<group>"; };
-		9BC213681F8989B900996D37 /* TCAppDelegate.h */ = {isa = PBXFileReference; path = TCAppDelegate.h; sourceTree = "<group>"; };
+		9BC213671F8989B900996D37 /* TiP_Clock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TiP_Clock-Prefix.pch"; sourceTree = "<group>"; };
+		9BC213681F8989B900996D37 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
 		9BC213691F8989B900996D37 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
 		9BC2136C1F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9BC2136E1F8989B900996D37 /* TCViewController.h */ = {isa = PBXFileReference; path = TCViewController.h; sourceTree = "<group>"; };
+		9BC2136E1F8989B900996D37 /* TCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
 		9BC2136F1F8989B900996D37 /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
 		9BC213761F8989B900996D37 /* TiP_ClockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiP_ClockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC213771F8989B900996D37 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9BC2137F1F8989B900996D37 /* TiP_ClockTests-Info.plist */ = {isa = PBXFileReference; path = "TiP_ClockTests-Info.plist"; sourceTree = "<group>"; };
+		9BC2137F1F8989B900996D37 /* TiP_ClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TiP_ClockTests-Info.plist"; sourceTree = "<group>"; };
 		9BC213811F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BC213831F8989B900996D37 /* TiP_ClockTests.h */ = {isa = PBXFileReference; path = TiP_ClockTests.h; sourceTree = "<group>"; };
+		9BC213831F8989B900996D37 /* TiP_ClockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TiP_ClockTests.h; sourceTree = "<group>"; };
 		9BC213841F8989B900996D37 /* TiP_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiP_ClockTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,7 +188,7 @@
 			name = TiP_ClockTests;
 			productName = TiP_ClockTests;
 			productReference = 9BC213761F8989B900996D37 /* TiP_ClockTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -197,7 +197,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = TC;
+				LastTestingUpgradeCheck = 0640;
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					9BC213541F8989B900996D37 = {
+						DevelopmentTeam = BXHV4Z2528;
+					};
+				};
 			};
 			buildConfigurationList = 9BC2134F1F8989B900996D37 /* Build configuration list for PBXProject "TiP_Clock" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -360,6 +366,7 @@
 		9BC213891F8989B900996D37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
 				INFOPLIST_FILE = "TiP_Clock/TiP_Clock-Info.plist";
@@ -371,6 +378,7 @@
 		9BC2138A1F8989B900996D37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
 				INFOPLIST_FILE = "TiP_Clock/TiP_Clock-Info.plist";
@@ -432,6 +440,7 @@
 				9BC2138A1F8989B900996D37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BC2138B1F8989B900996D37 /* Build configuration list for PBXNativeTarget "TiP_ClockTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +449,7 @@
 				9BC2138D1F8989B900996D37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
