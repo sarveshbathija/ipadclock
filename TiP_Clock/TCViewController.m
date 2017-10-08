@@ -32,7 +32,7 @@
     self.dateLabel.text = [dateFormat stringFromDate:[NSDate date]];
 
     [dateFormat setDateFormat:@"EEEE - MMM d, YYYY"];
-    [clockFormat setDateFormat:@"h:mm a"];
+    [clockFormat setDateFormat:@"h:mm"];
     
     [self performSelector:@selector(updateClockLabel) withObject:self afterDelay:1.0];
     [self performSelector:@selector(updateDateLabel) withObject:self afterDelay:30.0];
