@@ -75,18 +75,16 @@
 -(void)updateClockLabel {
     
     NSDateFormatter *clockFormat = [[NSDateFormatter alloc] init];
-    
+    [clockFormat setDateFormat:@"h:mm"];
     self.clockLabel.text = [clockFormat stringFromDate:[NSDate date]];
-
-    [clockFormat setDateFormat:@"h:mm a"];
     
     [self performSelector:@selector(updateClockLabel) withObject:self afterDelay:1.0];
 }
 
 -(void)updateDateLabel {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    self.dateLabel.text = [dateFormat stringFromDate:[NSDate date]];
     [dateFormat setDateFormat:@"EEEE - MMM d, YYYY"];
+    self.dateLabel.text = [dateFormat stringFromDate:[NSDate date]];
     [self performSelector:@selector(updateDateLabel) withObject:self afterDelay:30.0];
 
 }
