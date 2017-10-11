@@ -7,7 +7,9 @@
 //
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
-#define yahooWeatherURL [NSURL URLWithString:@"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22union%20city%2C%20ca%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"] //2
+#define yahooWeatherURL [NSURL URLWithString:@"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22union%20city%2C%20ca%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"]
+
+#define sarveshURL [NSURL URLWithString:@"http://sarveshbathija.myq-see.com:81/~sarveshbathija/ipadclock/custom_message.php"]
 
 #import "TCViewController.h"
 
@@ -23,6 +25,7 @@
     [self updateClockLabel];
     [self updateDateLabel];
     [self getTemp];
+    [self getCustomMessage];
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
     [UIApplication sharedApplication].idleTimerDisabled = YES;
@@ -37,6 +40,30 @@
         [self performSelectorOnMainThread:@selector(fetchedData:)
                                withObject:data waitUntilDone:YES];
     });
+}
+
+- (void)getCustomMessage {
+    dispatch_async(kBgQueue, ^{
+        NSData* customData = [NSData dataWithContentsOfURL:
+                        sarveshURL];
+        [self performSelectorOnMainThread:@selector(fetchedCustomMessage:)
+                               withObject:customData waitUntilDone:YES];
+    });
+}
+
+- (void)fetchedCustomMessage:(NSData *)responseData {
+    //parse out the json data
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:responseData //1
+                          
+                          options:kNilOptions
+                          error:&error];
+        
+    self.custom.text = [json objectForKey:@"custom"];
+    
+    [self performSelector:@selector(getTemp) withObject:self afterDelay:60.0];
+    
 }
 
 - (void)fetchedData:(NSData *)responseData {
@@ -75,7 +102,25 @@
 -(void)updateClockLabel {
     
     NSDateFormatter *clockFormat = [[NSDateFormatter alloc] init];
+
     [clockFormat setDateFormat:@"h:mm"];
+    
+    NSDate *date = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
+    NSInteger hour = [components hour];
+    NSInteger minute = [components minute];
+    NSInteger second = [components second];
+
+//    NSLog(@"value of a is : %d !\n", second);
+    
+//    if (hour == 5 || hour == 20) {
+//        self.custom.text = @"YOU CAN DO IT DOLLY!";
+//    }
+//    else {
+//        self.custom.text = @"";
+//    }
+
     self.clockLabel.text = [clockFormat stringFromDate:[NSDate date]];
     
     [self performSelector:@selector(updateClockLabel) withObject:self afterDelay:1.0];

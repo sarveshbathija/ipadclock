@@ -11,6 +11,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *forecastText;
 @property (weak, nonatomic) IBOutlet UILabel *forecastHigh;
 @property (weak, nonatomic) IBOutlet UILabel *forecastLow;
+@property (weak, nonatomic) IBOutlet UILabel *custom;
 
 -(void)updateClockLabel;
 
