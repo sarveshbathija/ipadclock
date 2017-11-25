@@ -14,7 +14,8 @@
 #import "TCViewController.h"
 
 @interface TCViewController ()
-
+    @property (nonatomic, strong) NSArray *colors;
+    @property (nonatomic) int index;
 @end
 
 @implementation TCViewController
@@ -27,11 +28,42 @@
     [self getTemp];
     [self getCustomMessage];
     
+    UIColor *color = [UIColor redColor];
+    [self.clockLabel setTextColor:color];
+
     [UIApplication sharedApplication].idleTimerDisabled = NO;
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
+        self.colors = @[
+            [UIColor greenColor],
+            [UIColor redColor],
+            [UIColor blueColor],
+            [UIColor cyanColor],
+            [UIColor purpleColor],
+            [UIColor grayColor],
+            [UIColor orangeColor],
+            [UIColor magentaColor],
+            [UIColor brownColor],
+            [UIColor whiteColor],
+            [UIColor yellowColor]];
 
+    UITapGestureRecognizer *singleFingerTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.view addGestureRecognizer:singleFingerTap];
+
+    self.index = 0;
 }
+
+- (void)handleTap:(UITapGestureRecognizer *)gestureRecognizer{
+    [self.clockLabel setTextColor:[self.colors objectAtIndex:self.index]];
+
+    self.index++;
+
+    if (self.index >= self.colors.count) {
+        self.index = 0;
+    }
+}
+
 
 - (void)getTemp {
     dispatch_async(kBgQueue, ^{
