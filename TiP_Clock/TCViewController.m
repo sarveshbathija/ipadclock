@@ -37,8 +37,9 @@
     dispatch_async(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:
                         yahooWeatherURL];
-        [self performSelectorOnMainThread:@selector(fetchedData:)
-                               withObject:data waitUntilDone:YES];
+        if (data) {
+            [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+        }
     });
 }
 
@@ -46,8 +47,10 @@
     dispatch_async(kBgQueue, ^{
         NSData* customData = [NSData dataWithContentsOfURL:
                         sarveshURL];
-        [self performSelectorOnMainThread:@selector(fetchedCustomMessage:)
-                               withObject:customData waitUntilDone:YES];
+        if (customData) {
+            [self performSelectorOnMainThread:@selector(fetchedCustomMessage:) withObject:customData waitUntilDone:YES];
+        }
+
     });
 }
 
@@ -62,7 +65,7 @@
         
     self.custom.text = [json objectForKey:@"custom"];
     
-    [self performSelector:@selector(getTemp) withObject:self afterDelay:60.0];
+    [self performSelector:@selector(getCustomMessage) withObject:self afterDelay:60.0];
     
 }
 
