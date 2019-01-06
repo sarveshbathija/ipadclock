@@ -7,7 +7,7 @@
 //
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
-#define yahooWeatherURL [NSURL URLWithString:@"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22union%20city%2C%20ca%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"]
+#define yahooWeatherURL [NSURL URLWithString:@"https://api.weather.com/v1/geocode/37.596329/-122.069672/observations/current.json?apiKey=6532d6454b8aa370768e63d6ba5a832e&units=e&language=en-US"]
 
 #define sarveshURL [NSURL URLWithString:@"http://sarveshbathija.myq-see.com:81/~sarveshbathija/ipadclock/custom_message.php"]
 
@@ -81,17 +81,28 @@
 
 
 - (void)getTemp {
+    NSLog(@"ssssy.");
+
     dispatch_async(kBgQueue, ^{
+        NSError* error = nil;
+
         NSData* data = [NSData dataWithContentsOfURL:
-                        yahooWeatherURL];
-        //NSLog(@"value of a is : %@ !\n", data);
+                        yahooWeatherURL options:NSDataReadingUncached error:&error];
+        
+//        if (error) {
+//            NSLog(@"%@", [error localizedDescription]);
+//        } else {
+//            NSLog(@"Data has loaded successfully.");
+//        }
+        
+//        NSLog(@"value of a is : %@ !\n", data);
         if (data) {
             [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
         } else {
             self.forecastText.text = @"Data Error";
         }
     });
-    [self performSelector:@selector(getTemp) withObject:self afterDelay:10.0];
+    [self performSelector:@selector(getTemp) withObject:self afterDelay:60.0];
     
 }
 
@@ -136,28 +147,16 @@
                           
                           options:kNilOptions
                           error:&error];
-    
-    NSDictionary* weather = [json objectForKey:@"query"]; //2
-    
-    NSDictionary* results = [weather objectForKey:@"results"];
-    
-    NSDictionary* channel = [results objectForKey:@"channel"];
-    
-    NSDictionary* item = [channel objectForKey:@"item"];
-    
-    NSDictionary* condition = [item objectForKey:@"condition"];
-    
-    NSArray* forecast = [item objectForKey:@"forecast"];
-    
-    NSDictionary* latestForecast = [forecast objectAtIndex:0];
-    
-    self.forecastText.text =[condition objectForKey:@"text"];
-    self.forecastHigh.text =[latestForecast objectForKey:@"high"];
-    self.forecastLow.text =[latestForecast objectForKey:@"low"];
-    
-    self.currentTempLabel.text = [condition objectForKey:@"temp"];
-    
-    
+//            NSLog(@"value of json is : %@ !\n", json);
+
+    NSDictionary* observation = [json objectForKey:@"observation"];
+    NSDictionary* imperial = [observation objectForKey:@"imperial"];
+
+    self.forecastText.text =[observation objectForKey:@"phrase_22char"];
+    self.forecastLow.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp_min_24hour"]];
+    self.forecastHigh.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp_max_24hour"]];
+    self.currentTempLabel.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp"]];
+
 }
 
 -(void)updateClockLabel {
@@ -169,9 +168,7 @@
     NSDate *date = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
-    NSInteger hour = [components hour];
-    NSInteger minute = [components minute];
-    NSInteger second = [components second];
+
     
     //    NSLog(@"value of a is : %d !\n", second);
     

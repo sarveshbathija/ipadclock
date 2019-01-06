@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BAB84FD21A0928600F83487 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB84FC21A0928600F83487 /* download.jpeg */; };
+		9BAB84FF21A0946A00F83487 /* 1564910.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB84FE21A0946A00F83487 /* 1564910.png */; };
+		9BAB850121A099E100F83487 /* mistletoe-transparent-small-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB850021A099E100F83487 /* mistletoe-transparent-small-6.png */; };
+		9BAB850321A09B5600F83487 /* holly-clipart-clear-background-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB850221A09B5600F83487 /* holly-clipart-clear-background-7.png */; };
+		9BAB850521A09BE100F83487 /* christmas-clipart-transparent-png-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB850421A09BE100F83487 /* christmas-clipart-transparent-png-3.jpg */; };
+		9BAB850721A09D4A00F83487 /* christmas-clipart-garland-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB850621A09D4A00F83487 /* christmas-clipart-garland-3.jpg */; };
 		9BC2135A1F8989B900996D37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC213591F8989B900996D37 /* UIKit.framework */; };
 		9BC2135C1F8989B900996D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC2135B1F8989B900996D37 /* Foundation.framework */; };
 		9BC2135E1F8989B900996D37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC2135D1F8989B900996D37 /* CoreGraphics.framework */; };
@@ -33,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9BAB84FC21A0928600F83487 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = download.jpeg; path = ../../../../Downloads/download.jpeg; sourceTree = "<group>"; };
+		9BAB84FE21A0946A00F83487 /* 1564910.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1564910.png; path = ../../../../Downloads/1564910.png; sourceTree = "<group>"; };
+		9BAB850021A099E100F83487 /* mistletoe-transparent-small-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mistletoe-transparent-small-6.png"; path = "../../../../Downloads/mistletoe-transparent-small-6.png"; sourceTree = "<group>"; };
+		9BAB850221A09B5600F83487 /* holly-clipart-clear-background-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "holly-clipart-clear-background-7.png"; path = "../../../../Downloads/holly-clipart-clear-background-7.png"; sourceTree = "<group>"; };
+		9BAB850421A09BE100F83487 /* christmas-clipart-transparent-png-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "christmas-clipart-transparent-png-3.jpg"; path = "../../../../Downloads/christmas-clipart-transparent-png-3.jpg"; sourceTree = "<group>"; };
+		9BAB850621A09D4A00F83487 /* christmas-clipart-garland-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "christmas-clipart-garland-3.jpg"; path = "../../../../Downloads/christmas-clipart-garland-3.jpg"; sourceTree = "<group>"; };
 		9BC213551F8989B900996D37 /* TiP_Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiP_Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC213591F8989B900996D37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BC2135B1F8989B900996D37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +64,8 @@
 		9BC213811F8989B900996D37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9BC213831F8989B900996D37 /* TiP_ClockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TiP_ClockTests.h; sourceTree = "<group>"; };
 		9BC213841F8989B900996D37 /* TiP_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiP_ClockTests.m; sourceTree = "<group>"; };
+		9BD8868E21E27C4000B4A074 /* MeetupCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupCommunicatorDelegate.h; sourceTree = "<group>"; };
+		9BD8868F21E27C7600B4A074 /* MeetupCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupCommunicator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +128,15 @@
 				9BC213681F8989B900996D37 /* TCAppDelegate.h */,
 				9BC213691F8989B900996D37 /* TCAppDelegate.m */,
 				9BC2136B1F8989B900996D37 /* MainStoryboard.storyboard */,
+				9BAB850621A09D4A00F83487 /* christmas-clipart-garland-3.jpg */,
+				9BAB850421A09BE100F83487 /* christmas-clipart-transparent-png-3.jpg */,
+				9BAB850221A09B5600F83487 /* holly-clipart-clear-background-7.png */,
+				9BAB84FE21A0946A00F83487 /* 1564910.png */,
 				9BC2136E1F8989B900996D37 /* TCViewController.h */,
+				9BAB850021A099E100F83487 /* mistletoe-transparent-small-6.png */,
 				9BC2136F1F8989B900996D37 /* TCViewController.m */,
+				9BD8868F21E27C7600B4A074 /* MeetupCommunicator.h */,
+				9BD8868E21E27C4000B4A074 /* MeetupCommunicatorDelegate.h */,
 				9BC213601F8989B900996D37 /* Supporting Files */,
 			);
 			path = TiP_Clock;
@@ -127,6 +148,7 @@
 				9BC213611F8989B900996D37 /* TiP_Clock-Info.plist */,
 				9BC213621F8989B900996D37 /* InfoPlist.strings */,
 				9BC213651F8989B900996D37 /* main.m */,
+				9BAB84FC21A0928600F83487 /* download.jpeg */,
 				9BC213671F8989B900996D37 /* TiP_Clock-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -228,8 +250,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BAB84FF21A0946A00F83487 /* 1564910.png in Resources */,
+				9BAB850121A099E100F83487 /* mistletoe-transparent-small-6.png in Resources */,
 				9BC213641F8989B900996D37 /* InfoPlist.strings in Resources */,
+				9BAB850521A09BE100F83487 /* christmas-clipart-transparent-png-3.jpg in Resources */,
 				9BC2136D1F8989B900996D37 /* MainStoryboard.storyboard in Resources */,
+				9BAB850321A09B5600F83487 /* holly-clipart-clear-background-7.png in Resources */,
+				9BAB850721A09D4A00F83487 /* christmas-clipart-garland-3.jpg in Resources */,
+				9BAB84FD21A0928600F83487 /* download.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,10 +395,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos8.4]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
 				INFOPLIST_FILE = "TiP_Clock/TiP_Clock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -379,10 +409,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos8.4]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiP_Clock/TiP_Clock-Prefix.pch";
 				INFOPLIST_FILE = "TiP_Clock/TiP_Clock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -3,6 +3,7 @@
 @interface TCViewController : UIViewController {
     IBOutlet UILabel* humanReadble;
     IBOutlet UILabel* jsonSummary;
+
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *clockLabel;
@@ -12,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *forecastHigh;
 @property (weak, nonatomic) IBOutlet UILabel *forecastLow;
 @property (weak, nonatomic) IBOutlet UILabel *custom;
-
 -(void)updateClockLabel;
 
 @end
