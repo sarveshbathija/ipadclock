@@ -9,7 +9,7 @@
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 #define yahooWeatherURL [NSURL URLWithString:@"https://api.weather.com/v1/geocode/37.596329/-122.069672/observations/current.json?apiKey=6532d6454b8aa370768e63d6ba5a832e&units=e&language=en-US"]
 
-#define sarveshURL [NSURL URLWithString:@"http://sarveshbathija.myq-see.com:81/~sarveshbathija/ipadclock/custom_message.php"]
+#define sarveshURL [NSURL URLWithString:@"http://192.168.86.69/temp/status.php"]
 
 #import "TCViewController.h"
 
@@ -26,7 +26,7 @@
     [self updateClockLabel];
     [self updateDateLabel];
     [self getTemp];
-    //[self getCustomMessage];
+    [self getCustomMessage];
     
     UIColor *color = [UIColor redColor];
     [self.clockLabel setTextColor:color];
@@ -115,10 +115,32 @@
 
 - (void)getCustomMessage {
     dispatch_async(kBgQueue, ^{
+        NSError* error = nil;
+
         NSData* customData = [NSData dataWithContentsOfURL:
-                              sarveshURL];
-        if (customData) {
-            [self performSelectorOnMainThread:@selector(fetchedCustomMessage:) withObject:customData waitUntilDone:YES];
+                              sarveshURL options:NSDataReadingUncached error:&error];
+        
+        NSDictionary* json = [NSJSONSerialization
+                              JSONObjectWithData:customData //1
+                              
+                              options:kNilOptions
+                              error:&error];
+        //            NSLog(@"value of json is : %@ !\n", json);
+                NSLog(@"valhhhue of a is : %@ !\n", json);
+
+        if (json) {
+            NSString *inside =[NSString stringWithFormat:@"%@", [json objectForKey:@"inside"]];
+            NSString *outside =[NSString stringWithFormat:@"%@", [json objectForKey:@"outside"]];
+            NSString *backroom =[NSString stringWithFormat:@"%@", [json objectForKey:@"backroom"]];
+            long insideTemp = roundf([inside floatValue]);
+            long outsideTemp = roundf([outside floatValue]);
+            long backroomTemp = roundf([backroom floatValue]);
+            self.indoorTemp.text = [NSString stringWithFormat: @"%ld", insideTemp];
+            self.currentTempLabel.text = [NSString stringWithFormat: @"%ld", outsideTemp];
+            self.backroomTemp.text = [NSString stringWithFormat: @"%ld", backroomTemp];
+
+
+//            [self performSelectorOnMainThread:@selector(fetchedCustomMessage:) withObject:customData waitUntilDone:YES];
         }
         
     });
@@ -155,7 +177,7 @@
     self.forecastText.text =[observation objectForKey:@"phrase_22char"];
     self.forecastLow.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp_min_24hour"]];
     self.forecastHigh.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp_max_24hour"]];
-    self.currentTempLabel.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp"]];
+//    self.currentTempLabel.text =[NSString stringWithFormat:@"%@", [imperial objectForKey:@"temp"]];
 
 }
 
