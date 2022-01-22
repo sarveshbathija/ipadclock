@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0A76AC88-C017-4C22-A899-986D52584512</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0198DB622AB268D6FB627FD0C88A49C34387E2FA</key>
+		<string>https://github.com/sarveshbathija/ipadclock.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TiP_Clock.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0198DB622AB268D6FB627FD0C88A49C34387E2FA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sarveshbathija/ipadclock.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0198DB622AB268D6FB627FD0C88A49C34387E2FA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0198DB622AB268D6FB627FD0C88A49C34387E2FA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ipadclock</string>
+		</dict>
+	</array>
+</dict>
+</plist>
